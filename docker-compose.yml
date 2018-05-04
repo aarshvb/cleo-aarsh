@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    restart: always
+    volumes:
+       - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    networks:
+       - back
+networks:
+  back:
+volumes:
+  db_data:
