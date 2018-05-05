@@ -16,7 +16,7 @@ MySql Docker container.
 
 [ec2](http://docs.ansible.com/ansible/ec2_module.html)
 
-## Example Instance Provisioning
+## Example of Instance Provisioning
 
 ---
 - hosts: localhost
