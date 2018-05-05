@@ -1,8 +1,7 @@
-# AWS EC2 Instance Provisioning
+# AWS EC2 Instance Provisioning and Wordpress Installation
 
 We can create ec2 instance with awsec2_provision.yml playbook. We can create AMI with awsec2_ami.yml playbook. Upon the creation of 
-instance in AWS, we can leverage that instance to do other things. Here I used this instance to install Wordpress with apache web server and 
-MySql Docker container.
+instance in AWS, we can leverage that instance to do other things. Here I used this instance to install Wordpress with apache web server and MySql Docker container. 
 
 ## Prerequisites
 
@@ -42,6 +41,20 @@ MySql Docker container.
   - files/awscreds.yml
   tasks:
   - name: Basic Provisioning of EC2
+  
+## Example of Docker-Compose yml
+
+version: '2'
+services:
+  db:
+    image: mysql
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    networks:
+      - back
   
 ## Author:
 
