@@ -8,7 +8,7 @@ MySql Docker container.
 
 - Ansible 2.5.2
 - Apache webserver
-- MySql Docekr container
+- MySql Docker container
 - Centos 7
 - AWS EC2 instance
 
