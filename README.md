@@ -11,6 +11,11 @@ instance in AWS, we can leverage that instance to do other things. Here I used t
 - Centos 7
 - AWS EC2 instance
 
+## Procedure
+
+- I installed Ansible in my Centos 7 sandbox. Then I created an EC2 instance in AWS. I installed AWS CLI on Centos to leverage AWS           services. I used that instance's public key to create other instance and AMI with Ansible playbook.
+- Once the instance is up and running I installed Apache web server and Docker Container with Mysql on it. I installed Wordpress on         Apache and integrated it with Mysql database. 
+
 ## Ansible modules
 
 [ec2](http://docs.ansible.com/ansible/ec2_module.html)
