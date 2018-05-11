@@ -36,27 +36,27 @@ instance in AWS, we can leverage that instance to do other things. Here I used t
 
 ## Example of AMI creation script
 
----__
-- hosts: localhost__
-  connection: local__
-  remote_user: test__
-  become: yes__
-  gather_facts: no__
-  vars_files:__
-  - files/awscreds.yml__
-  tasks:__
-  - name: Basic Provisioning of EC2__
+---<br/>
+- hosts: localhost<br/>
+  connection: local<br/>
+  remote_user: test<br/>
+  become: yes<br/>
+  gather_facts: no<br/>
+  vars_files:<br/>
+  - files/awscreds.yml<br/>
+  tasks:<br/>
+  - name: Basic Provisioning of EC2<br/>
   
 ## Example of Docker-Compose yml
 
-version: '2'__
-services:__
-  db:__
-    image: mysql__
-    restart: always__
-    volumes:__
-    - db_data:/var/lib/mysql__
-    environment:__
+version: '2'<br/>
+services:<br/>
+  db:<br/>
+    image: mysql<br/>
+    restart: always<br/>
+    volumes:<br/>
+    - db_data:/var/lib/mysql<br/>
+    environment:<br/>
       MYSQL_ROOT_PASSWORD: pass
     
 
