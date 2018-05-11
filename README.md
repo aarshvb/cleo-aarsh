@@ -49,7 +49,7 @@ instance in AWS, we can leverage that instance to do other things. Here I used t
   
 ## Example of Docker-Compose yml
 
-### version: '2'
+// version: '2'
 ### services:
 ###  db:
 ###    image: mysql
