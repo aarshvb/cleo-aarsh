@@ -22,8 +22,8 @@ instance in AWS, we can leverage that instance to do other things. Here I used t
 
 ## Example of Instance Provisioning
 
----__
-- hosts: localhost__
+---<br/>
+- hosts: localhost
   connection: local__
   remote_user: test__
   become: yes__
