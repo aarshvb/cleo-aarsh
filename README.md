@@ -23,43 +23,42 @@ instance in AWS, we can leverage that instance to do other things. Here I used t
 ## Example of Instance Provisioning
 
 ---
-- hosts: localhost
+-- hosts: localhost
   connection: local
   remote_user: test
   become: yes
   gather_facts: no
   vars_files:
-  - files/awscreds.yml
+  -- files/awscreds.yml
   tasks:
-  - name: Basic Provisioning of EC2
+  -- name: Basic Provisioning of EC2
 
 
 ## Example of AMI creation script
 
 ---
-- hosts: localhost
+-- hosts: localhost
   connection: local
   remote_user: test
   become: yes
   gather_facts: no
   vars_files:
-  - files/awscreds.yml
+ -- files/awscreds.yml
   tasks:
-  - name: Basic Provisioning of EC2
+ -- name: Basic Provisioning of EC2
   
 ## Example of Docker-Compose yml
 
-// version: '2'
-### services:
-###  db:
-###    image: mysql
-###    restart: always
-###    volumes:
-###      - db_data:/var/lib/mysql
-###    environment:
-###      MYSQL_ROOT_PASSWORD: pass
-###    networks:
-###      - back
+version: '2'
+services:
+  db:
+    image: mysql
+    restart: always
+    volumes:
+    -- db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    
 
   
 ## Author:
