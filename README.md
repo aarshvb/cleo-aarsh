@@ -23,14 +23,14 @@ instance in AWS, we can leverage that instance to do other things. Here I used t
 ## Example of Instance Provisioning
 
 ---<br/>
-- hosts: localhost
-  connection: local__
-  remote_user: test__
-  become: yes__
-  gather_facts: no__
-  vars_files:__
-  - files/awscreds.yml__
-  tasks:__
+- hosts: localhost<br/>
+  connection: local<br/>
+  remote_user: test<br/>
+  become: yes<br/>
+  gather_facts: no<br/>
+  vars_files:<br/>
+  - files/awscreds.yml<br/>
+  tasks:<br/>
   - name: Basic Provisioning of EC2
 
 
